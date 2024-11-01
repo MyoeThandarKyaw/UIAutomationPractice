@@ -4,25 +4,27 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.openqa.selenium.By;
+import java.awt.AWTException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class LoginUserwithincorrectemailandpassword{
+public class RegisterUserwithExistingEmail {
 	WebDriver driver;
-	public static final String URL = "https://automationexercise.com/login";
-	public static final String expectedLabelName = "Login to your account";
-	public static final String expectedErrorMessage = "Your email or password is incorrect!";
-	public static final String loginUserEmail = "MyoeThandar@gmail.com";
-	public static final String loginPassword = "Myoe@2024";
+	public static final String URL = "https://automationexercise.com/";
+	public static final String expectedLabelName = "New User Signup!";
+	public static final String expectedHomepageName = "AutomationExercise";
+	public static final String signUpUserEmail = "Myoe@gmail.com";
+	public static final String signUpUserName = "Myoe";
+	public static final String expectedErrorMessage = "Email Address already exist!";
+
 	
 	WebDriverWait wait = null;
 	LoginPage loginPage;
+	HomePage homePage;
 	
 	@BeforeClass
 	public void beforeClass() {
@@ -46,12 +48,17 @@ public class LoginUserwithincorrectemailandpassword{
 	}
 
 	@Test
-	public void loginUserwithcorrectEmailAndPassword() {
+	public void contactUsForm() throws AWTException {
 		loginPage=new LoginPage(driver);
-		String actualLabelName=loginPage.verifyLoginPageisVisisble();
+		homePage=new HomePage(driver);
+		String actualHomePageName=loginPage.verifyHomePageisVisible();
+		Assert.assertEquals(actualHomePageName, expectedHomepageName);
+	
+		loginPage.clickSignup_LoginButton();
+		String actualLabelName=loginPage.verifyNewUserSignUpPageisVisisble();
 		Assert.assertEquals(actualLabelName, expectedLabelName);
-		loginPage.fillUserNameAndPassword(loginUserEmail,loginPassword );
-		String actualErrorMessage=loginPage.getLoginErrorMessage();
+		homePage.setUserNameAndEmail(signUpUserName,signUpUserEmail);
+		String actualErrorMessage=loginPage.verifyHomePageisVisible();
 		Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
 	}
 

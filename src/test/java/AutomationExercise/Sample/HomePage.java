@@ -27,7 +27,7 @@ public class HomePage {
 	public WebElement userEmail;
 
 	@FindBy(xpath = "//button[normalize-space()='Signup']")
-	public WebElement submitButton;
+	public WebElement signupButton;
 
 	@FindBy(xpath = "//b[normalize-space()='Enter Account Information']")
 	public WebElement accountInformation;
@@ -103,10 +103,10 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void setUserNameAndEmail(String name, String email) throws InterruptedException {
+	public void setUserNameAndEmail(String name, String email) {
 		userName.sendKeys(name);
 		userEmail.sendKeys(email);
-		submitButton.click();
+		signupButton.click();
 
 	}
 

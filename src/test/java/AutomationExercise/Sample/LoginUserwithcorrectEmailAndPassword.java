@@ -45,7 +45,7 @@ public class LoginUserwithcorrectEmailAndPassword {
 	@Test
 	public void loginUserwithcorrectEmailAndPassword() {
 		loginPage=new LoginPage(driver);
-		String actualLabelName=loginPage.verifyHomePageisVisisble();
+		String actualLabelName=loginPage.verifyLoginPageisVisisble();
 		Assert.assertEquals(actualLabelName, expectedLabelName);
 		loginPage.fillUserNameAndPassword(loginUserEmail,loginPassword );
 		loginPage.waitLoginUserName();	

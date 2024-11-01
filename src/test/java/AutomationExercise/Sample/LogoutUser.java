@@ -46,7 +46,7 @@ public class LogoutUser {
 	@Test
 	public void loginUserwithcorrectEmailAndPassword() {
 		loginPage=new LoginPage(driver);
-		String actualLabelName=loginPage.verifyHomePageisVisisble();
+		String actualLabelName=loginPage.verifyLoginPageisVisisble();
 		Assert.assertEquals(actualLabelName, expectedLabelName);
 		loginPage.fillUserNameAndPassword(loginUserEmail,loginPassword );
 		loginPage.waitLoginUserName();	
@@ -54,7 +54,7 @@ public class LogoutUser {
 		String actualLoginUserName=loginPage.verifyLoginNameisVisisble();
 		Assert.assertEquals(actualLoginUserName, expectedLoginUserName);
 		loginPage.clickLogoutButton();
-		String actualLabelNameAfterLogout=loginPage.verifyHomePageisVisisble();
+		String actualLabelNameAfterLogout=loginPage.verifyLoginPageisVisisble();
 		Assert.assertEquals(actualLabelNameAfterLogout, expectedLabelName);
 		
 	}

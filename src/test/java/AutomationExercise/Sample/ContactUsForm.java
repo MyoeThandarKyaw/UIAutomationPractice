@@ -55,7 +55,7 @@ public class ContactUsForm {
 	@Test
 	public void contactUsForm() throws AWTException {
 		loginPage=new LoginPage(driver);
-		String actualLabelName=loginPage.verifyHomePageisVisisble();
+		String actualLabelName=loginPage.verifyLoginPageisVisisble();
 		Assert.assertEquals(actualLabelName, expectedLabelName);
 		loginPage.clickContactUsButton();
 		
