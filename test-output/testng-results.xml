@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-22T11:34:28 MMT" name="Default suite" finished-at="2024-09-22T11:34:53 MMT" duration-ms="25378">
+  <suite started-at="2024-11-01T21:28:06 MMT" name="Default suite" finished-at="2024-11-01T21:28:24 MMT" duration-ms="17346">
     <groups>
     </groups>
-    <test started-at="2024-09-22T11:34:28 MMT" name="Default test" finished-at="2024-09-22T11:34:53 MMT" duration-ms="25378">
-      <class name="AutomationExercise.Sample.LoginUserwithcorrectEmailAndPassword">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:AutomationExercise.Sample.LoginUserwithcorrectEmailAndPassword@3b6ddd1d]" started-at="2024-09-22T11:34:28 MMT" name="beforeClass" finished-at="2024-09-22T11:34:31 MMT" duration-ms="2644" status="PASS">
+    <test started-at="2024-11-01T21:28:06 MMT" name="Default test" finished-at="2024-11-01T21:28:24 MMT" duration-ms="17346">
+      <class name="AutomationExercise.Sample.ContactUsForm">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:AutomationExercise.Sample.ContactUsForm@3b6ddd1d]" started-at="2024-11-01T21:28:06 MMT" name="beforeClass" finished-at="2024-11-01T21:28:09 MMT" duration-ms="2800" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:AutomationExercise.Sample.LoginUserwithcorrectEmailAndPassword@3b6ddd1d]" started-at="2024-09-22T11:34:31 MMT" name="beforeMethod" finished-at="2024-09-22T11:34:34 MMT" duration-ms="3103" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:AutomationExercise.Sample.ContactUsForm@3b6ddd1d]" started-at="2024-11-01T21:28:09 MMT" name="beforeMethod" finished-at="2024-11-01T21:28:18 MMT" duration-ms="8498" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginUserwithcorrectEmailAndPassword()[pri:0, instance:AutomationExercise.Sample.LoginUserwithcorrectEmailAndPassword@3b6ddd1d]" started-at="2024-09-22T11:34:34 MMT" name="loginUserwithcorrectEmailAndPassword" finished-at="2024-09-22T11:34:53 MMT" duration-ms="19149" status="PASS">
+        <test-method signature="contactUsForm()[pri:0, instance:AutomationExercise.Sample.ContactUsForm@3b6ddd1d]" started-at="2024-11-01T21:28:18 MMT" name="contactUsForm" finished-at="2024-11-01T21:28:23 MMT" duration-ms="5631" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginUserwithcorrectEmailAndPassword -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:AutomationExercise.Sample.LoginUserwithcorrectEmailAndPassword@3b6ddd1d]" started-at="2024-09-22T11:34:53 MMT" name="afterMethod" finished-at="2024-09-22T11:34:53 MMT" duration-ms="392" status="PASS">
+        </test-method> <!-- contactUsForm -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:AutomationExercise.Sample.ContactUsForm@3b6ddd1d]" started-at="2024-11-01T21:28:23 MMT" name="afterMethod" finished-at="2024-11-01T21:28:24 MMT" duration-ms="338" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:AutomationExercise.Sample.LoginUserwithcorrectEmailAndPassword@3b6ddd1d]" started-at="2024-09-22T11:34:53 MMT" name="afterClass" finished-at="2024-09-22T11:34:53 MMT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:AutomationExercise.Sample.ContactUsForm@3b6ddd1d]" started-at="2024-11-01T21:28:24 MMT" name="afterClass" finished-at="2024-11-01T21:28:24 MMT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- AutomationExercise.Sample.LoginUserwithcorrectEmailAndPassword -->
+      </class> <!-- AutomationExercise.Sample.ContactUsForm -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

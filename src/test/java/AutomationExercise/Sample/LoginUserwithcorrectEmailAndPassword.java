@@ -1,14 +1,11 @@
 package AutomationExercise.Sample;
-
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -51,7 +48,8 @@ public class LoginUserwithcorrectEmailAndPassword {
 		String actualLabelName=loginPage.verifyHomePageisVisisble();
 		Assert.assertEquals(actualLabelName, expectedLabelName);
 		loginPage.fillUserNameAndPassword(loginUserEmail,loginPassword );
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//b[normalize-space()='Myoe']")));
+		loginPage.waitLoginUserName();	
+		
 		String actualLoginUserName=loginPage.verifyLoginNameisVisisble();
 		Assert.assertEquals(actualLoginUserName, expectedLoginUserName);
 	}
