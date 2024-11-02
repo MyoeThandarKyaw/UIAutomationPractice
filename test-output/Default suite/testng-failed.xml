@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AutomationExercise.Sample.RegisterUserwithExistingEmail">
+      <class name="AutomationExercise.Sample.VerifyTestCasesPage">
         <methods>
-          <include name="beforeClass"/>
-          <include name="contactUsForm"/>
-          <include name="beforeMethod"/>
           <include name="afterClass"/>
           <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="verifyTestCasesPage"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- AutomationExercise.Sample.RegisterUserwithExistingEmail -->
+      </class> <!-- AutomationExercise.Sample.VerifyTestCasesPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

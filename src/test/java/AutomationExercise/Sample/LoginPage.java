@@ -2,6 +2,8 @@ package AutomationExercise.Sample;
 import java.awt.AWTException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -71,6 +73,12 @@ public class LoginPage {
 	@FindBy(xpath = "//p[normalize-space()='Email Address already exist!']")
 	public WebElement emailAlreadyExistErrorMessage;
 
+	@FindBy(xpath = "//a[normalize-space()='Test Cases']")
+	public WebElement testCasesPage;
+	
+	@FindBy(xpath = "//b[normalize-space()='Test Cases']")
+	public WebElement testCasesLabel;
+	
 	WebDriver driver;
 	WebDriverWait wait = null;
 
@@ -148,4 +156,12 @@ public class LoginPage {
 		return emailAlreadyExistErrorMessage.getText();
 
 	}
+	public void clickTestCasesButton() {
+		testCasesPage.click();
+	}
+	public String verifyTestCasesPageisVisible() {
+		return testCasesLabel.getText();
+
+	}
+	
 }
