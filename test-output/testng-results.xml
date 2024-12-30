@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-02T21:48:56 MMT" name="Default suite" finished-at="2024-11-02T21:49:39 MMT" duration-ms="42862">
+  <suite started-at="2024-12-30T15:47:36 MMT" name="Default suite" finished-at="2024-12-30T15:47:50 MMT" duration-ms="13780">
     <groups>
     </groups>
-    <test started-at="2024-11-02T21:48:56 MMT" name="Default test" finished-at="2024-11-02T21:49:39 MMT" duration-ms="42862">
-      <class name="AutomationExercise.Sample.VerifyTestCasesPage">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:AutomationExercise.Sample.VerifyTestCasesPage@3b6ddd1d]" started-at="2024-11-02T21:48:56 MMT" name="beforeClass" finished-at="2024-11-02T21:48:58 MMT" duration-ms="2497" status="PASS">
+    <test started-at="2024-12-30T15:47:36 MMT" name="Default test" finished-at="2024-12-30T15:47:50 MMT" duration-ms="13780">
+      <class name="AutomationExercise.Sample.AddProdcutInCart">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:AutomationExercise.Sample.AddProdcutInCart@7e7be63f]" started-at="2024-12-30T15:47:36 MMT" name="beforeClass" finished-at="2024-12-30T15:47:38 MMT" duration-ms="1944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:AutomationExercise.Sample.VerifyTestCasesPage@3b6ddd1d]" started-at="2024-11-02T21:48:58 MMT" name="beforeMethod" finished-at="2024-11-02T21:49:22 MMT" duration-ms="23229" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:AutomationExercise.Sample.AddProdcutInCart@7e7be63f]" started-at="2024-12-30T15:47:38 MMT" name="beforeMethod" finished-at="2024-12-30T15:47:49 MMT" duration-ms="11310" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTestCasesPage()[pri:0, instance:AutomationExercise.Sample.VerifyTestCasesPage@3b6ddd1d]" started-at="2024-11-02T21:49:22 MMT" name="verifyTestCasesPage" finished-at="2024-11-02T21:49:38 MMT" duration-ms="16670" status="PASS">
+        <test-method signature="addProdcutInCart()[pri:0, instance:AutomationExercise.Sample.AddProdcutInCart@7e7be63f]" started-at="2024-12-30T15:47:49 MMT" name="addProdcutInCart" finished-at="2024-12-30T15:47:50 MMT" duration-ms="453" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTestCasesPage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:AutomationExercise.Sample.VerifyTestCasesPage@3b6ddd1d]" started-at="2024-11-02T21:49:38 MMT" name="afterMethod" finished-at="2024-11-02T21:49:39 MMT" duration-ms="379" status="PASS">
+        </test-method> <!-- addProdcutInCart -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:AutomationExercise.Sample.AddProdcutInCart@7e7be63f]" started-at="2024-12-30T15:47:50 MMT" name="afterMethod" finished-at="2024-12-30T15:47:50 MMT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:AutomationExercise.Sample.VerifyTestCasesPage@3b6ddd1d]" started-at="2024-11-02T21:49:39 MMT" name="afterClass" finished-at="2024-11-02T21:49:39 MMT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:AutomationExercise.Sample.AddProdcutInCart@7e7be63f]" started-at="2024-12-30T15:47:50 MMT" name="afterClass" finished-at="2024-12-30T15:47:50 MMT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- AutomationExercise.Sample.VerifyTestCasesPage -->
+      </class> <!-- AutomationExercise.Sample.AddProdcutInCart -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

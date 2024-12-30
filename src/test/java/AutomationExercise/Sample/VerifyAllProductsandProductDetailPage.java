@@ -11,17 +11,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class LoginUserwithincorrectemailandpassword{
+public class VerifyAllProductsandProductDetailPage {
 	WebDriver driver;
-	public static final String URL = "https://automationexercise.com/login";
-	public static final String expectedLabelName = "Login to your account";
-	public static final String expectedErrorMessage = "Your email or password is incorrect!";
-	public static final String loginUserEmail = "MyoeThandar@gmail.com";
-	public static final String loginPassword = "Myoe@2024";
-	
+	public static final String URL = "https://automationexercise.com/";
+	public static final String expectedHomepageName = "AutomationExercise";
+	public static final String expectedProductsLabel = "ALL PRODUCTS";
+
 	WebDriverWait wait = null;
 	LoginPage loginPage;
-	
+
 	@BeforeClass
 	public void beforeClass() {
 		System.setProperty("webdriver.chrome.driver", "resources\\chromedriver.exe");
@@ -35,7 +33,7 @@ public class LoginUserwithincorrectemailandpassword{
 		// Maximize the browser
 		driver.manage().window().maximize();
 		wait = new WebDriverWait(driver, 25);
-		
+
 	}
 
 	@BeforeMethod
@@ -44,13 +42,14 @@ public class LoginUserwithincorrectemailandpassword{
 	}
 
 	@Test
-	public void loginUserwithcorrectEmailAndPassword() {
-		loginPage=new LoginPage(driver);
-		String actualLabelName=loginPage.verifyLoginPageisVisisble();
-		Assert.assertEquals(actualLabelName, expectedLabelName);
-		loginPage.fillUserNameAndPassword(loginUserEmail,loginPassword );
-		String actualErrorMessage=loginPage.getLoginErrorMessage();
-		Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
+	public void verifyAllProductsandProductDetailPage() {
+		loginPage = new LoginPage(driver);
+		String actualHomePageName = loginPage.verifyHomePageisVisible();
+		Assert.assertEquals(actualHomePageName, expectedHomepageName);
+		loginPage.clickProductLinkButton();
+		String actualProductLabel = loginPage.getAllProductsLabel();
+		Assert.assertEquals(actualProductLabel, expectedProductsLabel);
+		
 	}
 
 	@AfterMethod

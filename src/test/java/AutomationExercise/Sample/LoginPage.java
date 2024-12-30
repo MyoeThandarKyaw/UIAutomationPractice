@@ -2,8 +2,6 @@ package AutomationExercise.Sample;
 import java.awt.AWTException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -78,6 +76,12 @@ public class LoginPage {
 	
 	@FindBy(xpath = "//b[normalize-space()='Test Cases']")
 	public WebElement testCasesLabel;
+	
+	@FindBy(xpath = "//a[@href='/products']")
+	public WebElement productLink;
+	
+	@FindBy(xpath = "//h2[normalize-space()='All Products']")
+	public WebElement allProductsLabel;
 	
 	WebDriver driver;
 	WebDriverWait wait = null;
@@ -161,6 +165,15 @@ public class LoginPage {
 	}
 	public String verifyTestCasesPageisVisible() {
 		return testCasesLabel.getText();
+
+	}
+	
+	public void clickProductLinkButton() {
+		productLink.click();
+	}
+	
+	public String getAllProductsLabel() {
+		return allProductsLabel.getText();
 
 	}
 	

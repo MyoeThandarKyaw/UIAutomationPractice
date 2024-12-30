@@ -94,9 +94,33 @@ public class HomePage {
 
 	@FindBy(xpath = "//a[normalize-space()='Delete Account']")
 	public WebElement deleteAccountButton;
-	
+
 	@FindBy(xpath = "//b[normalize-space()='Account Deleted!']")
 	public WebElement accountDeleteLabel;
+
+	@FindBy(xpath = "//div[@class='item active']//h1[1]")
+	public WebElement homePage;
+
+	@FindBy(xpath = "//h2[normalize-space()='Subscription']")
+	public WebElement labelSubscription;
+
+	@FindBy(id = "susbscribe_email")
+	public WebElement setEmail;
+
+	@FindBy(id = "subscribe")
+	public WebElement subscribeButton;
+
+	@FindBy(id = "success-subscribe")
+	public WebElement labelSuccessSubscribe;
+
+	@FindBy(xpath = "//a[normalize-space()='Cart']")
+	public WebElement cartButton;
+	
+	@FindBy(xpath = "(//a[@class='btn btn-default add-to-cart'][normalize-space()='Add to cart'])[2]")
+	public WebElement firstItem;
+	
+	@FindBy(xpath = "(//a[contains(text(),'View Product')])[1]")
+	public WebElement viewProductButton;
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -156,8 +180,38 @@ public class HomePage {
 		deleteAccountButton.click();
 
 	}
+
 	public String verifyAccountDeleteLabelDisplay() throws InterruptedException {
 		return accountDeleteLabel.getText();
 
+	}
+
+	public String verifyHomePageisVisible() {
+		return homePage.getText();
+
+	}
+
+	public String getLabelSubscription() {
+		return labelSubscription.getText();
+
+	}
+
+	public void fillEmailAndClickArrowButton(String email) {
+		setEmail.sendKeys(email);
+		subscribeButton.click();
+
+	}
+
+	public String getlabelSuccessSubscribe() {
+		return labelSuccessSubscribe.getText();
+
+	}
+
+	public void clickCartButton() {
+		cartButton.click();
+	}
+	
+	public void clickFirstItem() {
+		firstItem.click();
 	}
 }
