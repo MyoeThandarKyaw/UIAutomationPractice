@@ -1,10 +1,10 @@
 package AutomationExercise.Sample;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -13,15 +13,23 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import pages.HomePage;
+import pages.LoginPage;
+
 public class AddProdcutInCart {
 	WebDriver driver;
-	public static final String URL = "https://automationexercise.com/";
+	public static final String URL = "https://automationexercise.com/login";
 	public static final String expectedHomepageName = "AutomationExercise";
 	public static final String expectedProductsLabel = "ALL PRODUCTS";
+	public static final String expectedLoginUserName = "Myoe";
+	public static final String loginUserEmail = "Myoe@gmail.com";
+	public static final String loginPassword = "Myoe@2024";
+	public static final String expectedLabelName = "Login to your account";
 
 	WebDriverWait wait = null;
 	LoginPage loginPage;
 	HomePage homePage;
+	int itemNumber=0;
 
 	@BeforeClass
 	public void beforeClass() {
@@ -48,24 +56,44 @@ public class AddProdcutInCart {
 	public void addProdcutInCart() {
 		//loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
-		String actualHomePageName = homePage.verifyHomePageisVisible();
-		Assert.assertEquals(actualHomePageName, expectedHomepageName);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-		//loginPage.clickProductLinkButton();
-		//Creating object of an Actions class
-		Actions action = new Actions(driver);
 
-		//Performing the mouse hover action on the target element.
-		action.moveToElement(homePage.firstItem).perform();
-		//homePage.clickFirstItem();
+		loginPage=new LoginPage(driver);
+		String actualLabelName=loginPage.verifyLoginPageisVisisble();
+		Assert.assertEquals(actualLabelName, expectedLabelName);
+		loginPage.fillUserNameAndPassword(loginUserEmail,loginPassword );
+		loginPage.waitLoginUserName();	
 		
+		String actualLoginUserName=loginPage.verifyLoginNameisVisisble();
+		Assert.assertEquals(actualLoginUserName, expectedLoginUserName);
+
+		loginPage.clickProductLinkButton();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		for(int i=1; i<=2;i++) {
+		itemNumber=i;
+		switch(itemNumber) {
+		case 1 :
+			homePage.clickSearchButtonforFirstItem();
+			js.executeScript("window.scrollBy(0,1050)", "");
+			break;
+			
+		case 2 :
+			homePage.clickSearchButtonforSecondItem();
+			js.executeScript("window.scrollBy(0,750)", "");			
+			break;			
+		}
+			
+		homePage.chooseFirstItem();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='modal-content']")));
+		homePage.clickContinueShoppingButton();
+		
+		}
 		
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-		// driver.quit();
+		//driver.quit();
 	}
 
 	@AfterClass

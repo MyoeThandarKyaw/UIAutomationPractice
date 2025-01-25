@@ -12,6 +12,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import pages.HomePage;
+import pages.LoginPage;
+
 public class VerifySubscriptioninCartPage {
 	WebDriver driver;
 	public static final String URL = "https://automationexercise.com/";

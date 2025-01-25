@@ -1,4 +1,4 @@
-package AutomationExercise.Sample;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +18,9 @@ public class HomePage {
 	public static final String userPassword = "Myoe@2024";
 	public static final String zipCode = "+95";
 	public static final String mobileNumber = "9791009103";
+	public static final String searchFirstItemName = "Sleeves Printed Top - White";
+	public static final String searchSecondItemName = "Half Sleeves Top Schiffli Detailing - Pink";
+
 	WebDriver driver;
 
 	@FindBy(name = "name")
@@ -115,12 +118,30 @@ public class HomePage {
 
 	@FindBy(xpath = "//a[normalize-space()='Cart']")
 	public WebElement cartButton;
-	
-	@FindBy(xpath = "(//a[@class='btn btn-default add-to-cart'][normalize-space()='Add to cart'])[2]")
-	public WebElement firstItem;
-	
+
+	@FindBy(xpath = "//div[@class='product-overlay']")
+	public WebElement movetoItem;
+
+	@FindBy(xpath = "(//a[@class='btn btn-default add-to-cart'][normalize-space()='Add to cart'])[1]")
+	public WebElement chooseFirstItem;
+
 	@FindBy(xpath = "(//a[contains(text(),'View Product')])[1]")
 	public WebElement viewProductButton;
+
+	@FindBy(xpath = "//button[normalize-space()='Continue Shopping']")
+	public WebElement continueShoppingButton;
+
+	@FindBy(id = "search_product")
+	public WebElement searchBox;
+
+	@FindBy(id = "submit_search")
+	public WebElement searchButton;
+
+	@FindBy(xpath = "//div[@class='overlay-content']//p[contains(text(),'Sleeves Printed Top - White')]")
+	public WebElement searchItem;
+	
+	@FindBy(xpath = "//div[@class='modal-content']")
+	public WebElement getModal;
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -204,14 +225,35 @@ public class HomePage {
 
 	public String getlabelSuccessSubscribe() {
 		return labelSuccessSubscribe.getText();
-
 	}
 
 	public void clickCartButton() {
 		cartButton.click();
 	}
+
+	public void chooseFirstItem() {
+		chooseFirstItem.click();
+		
+
+	}
 	
-	public void clickFirstItem() {
-		firstItem.click();
+	public void clickContinueShoppingButton() {
+		continueShoppingButton.click();
+	}
+
+	public void clickSearchButtonforFirstItem() {
+		searchBox.sendKeys(searchFirstItemName);
+		searchButton.click();
+		
+	}
+	public void clickSearchButtonforSecondItem() {
+		searchBox.clear();
+		searchBox.sendKeys(searchSecondItemName);
+		searchButton.click();
+		
+	}
+
+	public String getSearchItemName() {
+		return searchItem.getText();
 	}
 }

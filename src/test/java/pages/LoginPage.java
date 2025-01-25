@@ -1,4 +1,4 @@
-package AutomationExercise.Sample;
+package pages;
 import java.awt.AWTException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
