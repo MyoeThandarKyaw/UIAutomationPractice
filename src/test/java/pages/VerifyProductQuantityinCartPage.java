@@ -1,13 +1,17 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class VerifyProductQuantityinCartPage {
 	WebDriver driver;
+	WebDriverWait wait = null;	
 	
 	@FindBy(xpath = "(//a[normalize-space()='View Product'])[1]")
 	public WebElement viewProductButton;
@@ -27,6 +31,7 @@ public class VerifyProductQuantityinCartPage {
 	public VerifyProductQuantityinCartPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		wait = new WebDriverWait(driver, 25);
 	}
 	
 	public void clickViewProductButton() {
@@ -40,7 +45,8 @@ public class VerifyProductQuantityinCartPage {
 		
 	}
 	public void clickViewCartButton() {
-		viewCart.click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='modal-content']")));
+		viewCart.click();		
 	}
 	
 	public String getQuantity() {

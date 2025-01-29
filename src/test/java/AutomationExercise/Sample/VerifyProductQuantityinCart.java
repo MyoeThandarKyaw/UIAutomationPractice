@@ -32,7 +32,7 @@ public class VerifyProductQuantityinCart {
 	LoginPage loginPage;
 	HomePage homePage;
 	VerifyProductQuantityinCartPage verifyProductQuantityinCartPage;
-	int expectedQuantity=4;
+	int expectedQuantity = 4;
 
 	@BeforeClass
 	public void beforeClass() {
@@ -57,18 +57,18 @@ public class VerifyProductQuantityinCart {
 
 	@Test
 	public void verifyProductQuantityinCart() {
-		//loginPage = new LoginPage(driver);
+		// loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 
-		loginPage=new LoginPage(driver);
-		verifyProductQuantityinCartPage=new VerifyProductQuantityinCartPage(driver);
-		
-		String actualLabelName=loginPage.verifyLoginPageisVisisble();
+		loginPage = new LoginPage(driver);
+		verifyProductQuantityinCartPage = new VerifyProductQuantityinCartPage(driver);
+
+		String actualLabelName = loginPage.verifyLoginPageisVisisble();
 		Assert.assertEquals(actualLabelName, expectedLabelName);
-		loginPage.fillUserNameAndPassword(loginUserEmail,loginPassword );
-		loginPage.waitLoginUserName();	
-		
-		String actualLoginUserName=loginPage.verifyLoginNameisVisisble();
+		loginPage.fillUserNameAndPassword(loginUserEmail, loginPassword);
+		loginPage.waitLoginUserName();
+
+		String actualLoginUserName = loginPage.verifyLoginNameisVisisble();
 		Assert.assertEquals(actualLoginUserName, expectedLoginUserName);
 
 		loginPage.clickProductLinkButton();
@@ -79,13 +79,13 @@ public class VerifyProductQuantityinCart {
 		verifyProductQuantityinCartPage.setQuantity();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='modal-content']")));
 		verifyProductQuantityinCartPage.clickViewCartButton();
-		int quantity=Integer.valueOf(verifyProductQuantityinCartPage.getQuantity());
+		int quantity = Integer.valueOf(verifyProductQuantityinCartPage.getQuantity());
 		Assert.assertEquals(quantity, expectedQuantity);
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-		//driver.quit();
+		// driver.quit();
 	}
 
 	@AfterClass
