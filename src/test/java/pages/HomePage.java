@@ -1,10 +1,13 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
 	public static final String first_Name = "Myoe Thandar";
@@ -22,7 +25,7 @@ public class HomePage {
 	public static final String searchSecondItemName = "Half Sleeves Top Schiffli Detailing - Pink";
 
 	WebDriver driver;
-
+	WebDriverWait wait = null;
 	@FindBy(name = "name")
 	public WebElement userName;
 
@@ -146,6 +149,7 @@ public class HomePage {
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		wait = new WebDriverWait(driver, 25);
 	}
 
 	public void setUserNameAndEmail(String name, String email) {
@@ -192,8 +196,9 @@ public class HomePage {
 	}
 
 	public void clickContinueButton() {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Continue")));
 		continueButton.click();
-		// deleteAccountButton.click();
+		
 
 	}
 

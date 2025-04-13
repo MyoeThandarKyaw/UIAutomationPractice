@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-29T20:58:50 MMT" name="Default suite" finished-at="2025-01-29T20:59:40 MMT" duration-ms="50698">
+  <suite started-at="2025-04-13T11:42:01 MMT" name="Default suite" finished-at="2025-04-13T11:42:14 MMT" duration-ms="13169">
     <groups>
     </groups>
-    <test started-at="2025-01-29T20:58:50 MMT" name="Default test" finished-at="2025-01-29T20:59:40 MMT" duration-ms="50698">
-      <class name="AutomationExercise.Sample.PlaceOrder_Login_BeforeCheckOut">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:AutomationExercise.Sample.PlaceOrder_Login_BeforeCheckOut@7e7be63f]" started-at="2025-01-29T20:58:50 MMT" name="beforeClass" finished-at="2025-01-29T20:58:52 MMT" duration-ms="2203" status="PASS">
+    <test started-at="2025-04-13T11:42:01 MMT" name="Default test" finished-at="2025-04-13T11:42:14 MMT" duration-ms="13169">
+      <class name="AutomationExercise.Sample.RemoveProductfromCard">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:AutomationExercise.Sample.RemoveProductfromCard@7e7be63f]" started-at="2025-04-13T11:42:01 MMT" name="beforeClass" finished-at="2025-04-13T11:42:02 MMT" duration-ms="1627" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:AutomationExercise.Sample.PlaceOrder_Login_BeforeCheckOut@7e7be63f]" started-at="2025-01-29T20:58:52 MMT" name="beforeMethod" finished-at="2025-01-29T20:58:57 MMT" duration-ms="5145" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:AutomationExercise.Sample.RemoveProductfromCard@7e7be63f]" started-at="2025-04-13T11:42:02 MMT" name="beforeMethod" finished-at="2025-04-13T11:42:04 MMT" duration-ms="1622" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyProductQuantityinCart()[pri:0, instance:AutomationExercise.Sample.PlaceOrder_Login_BeforeCheckOut@7e7be63f]" started-at="2025-01-29T20:58:57 MMT" name="verifyProductQuantityinCart" finished-at="2025-01-29T20:59:40 MMT" duration-ms="42835" status="PASS">
+        <test-method signature="removeProductfromCard()[pri:0, instance:AutomationExercise.Sample.RemoveProductfromCard@7e7be63f]" started-at="2025-04-13T11:42:04 MMT" name="removeProductfromCard" finished-at="2025-04-13T11:42:14 MMT" duration-ms="9650" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyProductQuantityinCart -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:AutomationExercise.Sample.PlaceOrder_Login_BeforeCheckOut@7e7be63f]" started-at="2025-01-29T20:59:40 MMT" name="afterMethod" finished-at="2025-01-29T20:59:40 MMT" duration-ms="437" status="PASS">
+        </test-method> <!-- removeProductfromCard -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:AutomationExercise.Sample.RemoveProductfromCard@7e7be63f]" started-at="2025-04-13T11:42:14 MMT" name="afterMethod" finished-at="2025-04-13T11:42:14 MMT" duration-ms="234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:AutomationExercise.Sample.PlaceOrder_Login_BeforeCheckOut@7e7be63f]" started-at="2025-01-29T20:59:40 MMT" name="afterClass" finished-at="2025-01-29T20:59:40 MMT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:AutomationExercise.Sample.RemoveProductfromCard@7e7be63f]" started-at="2025-04-13T11:42:14 MMT" name="afterClass" finished-at="2025-04-13T11:42:14 MMT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- AutomationExercise.Sample.PlaceOrder_Login_BeforeCheckOut -->
+      </class> <!-- AutomationExercise.Sample.RemoveProductfromCard -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -90,12 +90,12 @@ public class PlaceOrder_Login_BeforeCheckOut {
 		placeOrder_Login_BeforeCheckOutPage.clickProceedToCheckoutButton();
 		placeOrder_Login_BeforeCheckOutPage.setMessage(orderMessage);
 		placeOrder_Login_BeforeCheckOutPage.clickPlaceOrderButton();
-		placeOrder_Login_BeforeCheckOutPage.fillPaymentInformation(nameOnCard, cardNumber, cvc, expiryMonth, actualLoginUserName);
+		placeOrder_Login_BeforeCheckOutPage.fillPaymentInformation(nameOnCard, cardNumber, cvc, expiryMonth, expiryYear);
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-	 driver.quit();
+	 //driver.quit();
 	}
 
 	@AfterClass

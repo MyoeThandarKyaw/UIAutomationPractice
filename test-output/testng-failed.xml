@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AutomationExercise.Sample.PlaceOrder_Login_BeforeCheckOut">
+      <class name="AutomationExercise.Sample.RemoveProductfromCard">
         <methods>
           <include name="beforeMethod"/>
-          <include name="beforeClass"/>
-          <include name="verifyProductQuantityinCart"/>
-          <include name="afterMethod"/>
           <include name="afterClass"/>
+          <include name="removeProductfromCard"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- AutomationExercise.Sample.PlaceOrder_Login_BeforeCheckOut -->
+      </class> <!-- AutomationExercise.Sample.RemoveProductfromCard -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
