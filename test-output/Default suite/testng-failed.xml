@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AutomationExercise.Sample.RemoveProductfromCard">
+      <class name="AutomationExercise.Sample.ViewCategoryProducts">
         <methods>
-          <include name="beforeMethod"/>
+          <include name="viewCategoryProducts"/>
           <include name="afterClass"/>
-          <include name="removeProductfromCard"/>
-          <include name="afterMethod"/>
           <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- AutomationExercise.Sample.RemoveProductfromCard -->
+      </class> <!-- AutomationExercise.Sample.ViewCategoryProducts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
